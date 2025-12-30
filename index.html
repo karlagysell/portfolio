@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karla Galdamez | Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root { 
+            --bg-dark: #3d444d; 
+            --card-bg: #ffffff; 
+            --text-main: #ffffff; 
+            --text-dark: #333333; 
+        }
+        body { 
+            margin: 0; 
+            padding: 0; 
+            font-family: 'Inter', sans-serif; 
+            background-color: var(--bg-dark); 
+            color: var(--text-main); 
+            display: flex; 
+            justify-content: center; 
+            min-height: 100vh; 
+        }
+        .container { 
+            max-width: 1100px; 
+            width: 90%; 
+            padding: 60px 0; 
+        }
+        
+        /* --- Top Section Layout --- */
+        .top-row { 
+            display: grid; 
+            grid-template-columns: 1fr 300px 250px; 
+            gap: 40px; 
+            align-items: center; 
+            margin-bottom: 30px; 
+        }
+        .header-info h1 { 
+            font-size: 3.8rem; 
+            margin: 0; 
+            font-weight: 600; 
+            letter-spacing: -1.5px; 
+            line-height: 1; 
+        }
+        .header-info .title { 
+            font-size: 1.4rem; 
+            opacity: 0.9; 
+            margin: 15px 0 0 0; 
+        }
+        
+        /* --- Image & Buttons --- */
+        .profile-img { 
+            width: 300px; 
+            height: 300px; 
+            border-radius: 50%; 
+            object-fit: cover; 
+            border: 8px solid rgba(255,255,255,0.1); 
+            background-color: #eee; 
+        }
+        .side-buttons { 
+            display: flex; 
+            flex-direction: column; 
+            gap: 15px; 
+        }
+        .btn { 
+            background: var(--card-bg); 
+            color: var(--text-dark); 
+            padding: 20px; 
+            border-radius: 12px; 
+            text-decoration: none; 
+            display: flex; 
+            flex-direction: column; 
+            align-items: center; 
+            justify-content: center; 
+            text-align: center; 
+            font-weight: 600; 
+            transition: 0.3s; 
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2); 
+        }
+        .btn i { font-size: 1.5rem; margin-bottom: 8px; }
+        .btn-linkedin { background: #0077b5; color: white; }
+        .btn:hover { transform: scale(1.05); }
+
+        /* --- Content Grid for Cards --- */
+        .content-grid { 
+            display: grid; 
+            grid-template-columns: 1fr 1fr; 
+            gap: 20px; 
+        }
+        .card { 
+            background: var(--card-bg); 
+            color: var(--text-dark); 
+            padding: 30px; 
+            border-radius: 20px; 
+            margin-bottom: 20px;
+        }
+        /* Full width card for Education */
+        .card-full { grid-column: span 2; }
+        
+        .card h2 { 
+            margin-top: 0; 
+            font-size: 1.6rem; 
+            border-bottom: 2px solid #eee; 
+            padding-bottom: 10px; 
+            color: var(--text-dark);
+        }
+        .card p, .card li { font-size: 1rem; line-height: 1.6; color: #444; }
+
+        @media (max-width: 992px) { 
+            .top-row { grid-template-columns: 1fr; text-align: center; } 
+            .side-buttons { flex-direction: row; justify-content: center; } 
+            .content-grid { grid-template-columns: 1fr; } 
+            .card-full { grid-column: span 1; }
+            .profile-img { margin: 0 auto; } 
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="top-row">
+            <div class="header-info">
+                <h1>Karla Galdamez</h1>
+                <div class="title">Ad-Tech, Brand Strategy, and Analytics</div>
+            </div>
+            <img src="me.jpg" alt="Karla Galdamez" class="profile-img">
+            <div class="side-buttons">
+                <a href="#" class="btn"><i class="fas fa-file-alt"></i><span>Writing Samples</span></a>
+                <a href="#" class="btn"><i class="fas fa-th-large"></i><span>Project Portfolio</span></a>
+                <a href="https://www.linkedin.com/in/karlagaldamez" class="btn btn-linkedin" target="_blank"><i class="fab fa-linkedin"></i><span>LinkedIn Profile</span></a>
+            </div>
+        </div>
+
+        <div class="content-grid">
+            <div class="card card-full">
+                <h2>Education</h2>
+                <p><strong>Fashion Institute of Technology</strong>, Advertising and Marketing Communications, Graduation date: July 2026</p>
+                <p><strong>Bachelor's, Sociology</strong>, Graduation date: 2023</p>
+            </div>
+
+            <div class="card">
+                <h2>About Me</h2>
+                <p>Hi, I'm Karla. I blend analytics with creative problem solving and strategy. Through my experience in Consumer Analytics and Account Strategy at Google, I have gained exposure to data visualization & generating insights, campaign Optimization, and process automation.</p>
+            </div>
+
+            <div class="card">
+                <h2>Professional Experience</h2>
+                <p><strong>Google</strong> | Analytics & Account Strategist</p>
+                <ul>
+                    <li><strong>Consumer Analytics:</strong> Designed actionable dashboards and automated reporting pipelines for Ads & Shopping, reducing manual workload by 30% while identifying key user pain points.</li>
+                    <li><strong>Account Strategy:</strong> Managed a portfolio of lead-generation clients, utilizing A/B testing and performance data to pitch growth strategies that maximized ROAS and engagement.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
